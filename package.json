@@ -1,31 +1,17 @@
 {
     "name": "primevue",
     "version": "3.52.0",
+    "private": false,
+    "author": "PrimeTek Informatics",
+    "description": "PrimeVue is an open source UI library for Vue featuring a rich set of 80+ components, a theme designer, various theme alternatives such as Material, Bootstrap, Tailwind, premium templates and professional support. In addition, it integrates with PrimeBlock, which has 370+ ready to use UI blocks to build spectacular applications in no time.",
     "homepage": "https://primevue.org/",
     "repository": {
         "type": "git",
         "url": "https://github.com/primefaces/primevue.git"
     },
     "license": "MIT",
-    "scripts": {
-        "build": "nuxt build",
-        "dev": "nuxt dev",
-        "generate": "nuxt generate",
-        "preview": "nuxt preview",
-        "postinstall": "nuxt prepare",
-        "build:lib": "npm run build:check && npm run build:package",
-        "build:package": "NODE_ENV=production rollup -c && node build-meta && node api-generator/build-api && gulp build-styles",
-        "build:check": "npm run format:check && npm run security:check",
-        "security:check": "npm audit --production --audit-level high",
-        "format": "prettier --write \"**/*.{js,vue,d.ts}\" --cache",
-        "format:check": "prettier --check \"**/*.{js,vue,d.ts}\"",
-        "test:unit": "vitest run",
-        "test:unit:watch": "vitest watch",
-        "test:coverage": "vitest run --coverage",
-        "lint": "eslint --ext \".js,.vue\" --ignore-path .gitignore . --cache",
-        "lint:fix": "eslint --fix --ext \".js,.vue\" --ignore-path .gitignore .",
-        "apidoc": "node ./api-generator/build-apidoc.js",
-        "build:api": "node ./api-generator/build-api.js && npm run apidoc"
+    "bugs": {
+        "url": "https://github.com/primefaces/primevue/issues"
     },
     "keywords": [
         "primevue",
@@ -42,44 +28,12 @@
         "unstyled",
         "passthrough"
     ],
-    "devDependencies": {
-        "@babel/eslint-parser": "^7.18.9",
-        "@babel/preset-env": "^7.21.5",
-        "@rollup/plugin-babel": "^6.0.3",
-        "@stackblitz/sdk": "^1.8.2",
-        "@vitejs/plugin-vue": "4.1.0",
-        "@vitest/coverage-istanbul": "^0.29.8",
-        "@vue/test-utils": "^2.0.0",
-        "chart.js": "3.3.2",
-        "eslint": "^8.30.0",
-        "eslint-config-prettier": "^8.5.0",
-        "eslint-plugin-nuxt": "^4.0.0",
-        "eslint-plugin-prettier": "^4.2.1",
-        "eslint-plugin-vue": "^9.4.0",
-        "gulp": "^4.0.2",
-        "gulp-concat": "^2.6.0",
-        "gulp-flatten": "^0.4.0",
-        "gulp-rename": "^2.0.0",
-        "gulp-uglify": "^3.0.2",
-        "gulp-uglifycss": "^1.0.6",
-        "jsdom": "^19.0.0",
-        "nuxt": "3.3.2",
-        "prettier": "2.7.1",
-        "primeflex": "^3.3.1",
-        "primeicons": "^7.0.0",
-        "quill": "^1.3.7",
-        "rollup-plugin-postcss": "^4.0.0",
-        "rollup-plugin-terser": "^7.0.2",
-        "rollup-plugin-vue": "^6.0.0-beta.9",
-        "sass": "^1.45.0",
-        "sass-loader": "^8.0.2",
-        "typedoc": "0.23.23",
-        "typescript": "^4.9.4",
-        "vitest": "^0.29.8"
+    "web-types": "./web-types.json",
+    "vetur": {
+        "tags": "./vetur-tags.json",
+        "attributes": "./vetur-attributes.json"
     },
-    "dependencies": {
-        "@docsearch/js": "^3.3.3",
-        "nuxt-gtag": "^0.6.2",
-        "vee-validate": "^4.8.2"
+    "peerDependencies": {
+        "vue": "^3.0.0"
     }
 }
