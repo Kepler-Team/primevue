@@ -154,6 +154,9 @@ var script = {
       this.$emit('blur', event);
     },
     onKeyDown: function onKeyDown(event) {
+      if (event.ctrlKey || event.metaKey) {
+        return;
+      }
       switch (event.code) {
         case 'ArrowLeft':
           this.moveToPrev(event);

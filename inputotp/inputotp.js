@@ -159,6 +159,9 @@ this.primevue.inputotp = (function (InputText, BaseComponent, InputOtpStyle, vue
           this.$emit('blur', event);
         },
         onKeyDown: function onKeyDown(event) {
+          if (event.ctrlKey || event.metaKey) {
+            return;
+          }
           switch (event.code) {
             case 'ArrowLeft':
               this.moveToPrev(event);
